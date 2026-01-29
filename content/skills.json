@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "name": "Programming Languages",
+      "skills": [
+        { "name": "Python", "level": 90 },
+        { "name": "Java", "level": 85 },
+        { "name": "C/C++", "level": 80 },
+        { "name": "C#", "level": 80 },
+        { "name": "JavaScript", "level": 88 },
+        { "name": "SQL (MySQL)", "level": 82 },
+        { "name": "NoSQL", "level": 80 },
+        { "name": "HTML/CSS", "level": 87 }
+      ]
+    },
+    {
+      "name": "Developer Tools",
+      "skills": [
+        { "name": "Git", "level": 85 },
+        { "name": "VS Code", "level": 88 },
+        { "name": "Visual Studio", "level": 75 },
+        { "name": "Eclipse", "level": 70 },
+        { "name": "Unity", "level": 72 }
+      ]
+    },
+    {
+      "name": "Libraries & Frameworks",
+      "skills": [
+        { "name": "pandas", "level": 78 },
+        { "name": "NumPy", "level": 78 },
+        { "name": "Matplotlib", "level": 72 },
+        { "name": "scikit-learn", "level": 72 },
+        { "name": "PyTorch", "level": 70 }
+      ]
+    },
+    {
+      "name": "Soft Skills",
+      "skills": [
+        { "name": "Problem-Solving & Analytical Thinking", "level": 95 },
+        { "name": "Leadership & Team Collaboration", "level": 95 },
+        { "name": "Communication & Public Speaking", "level": 90 },
+        { "name": "Innovation", "level": 92 }
+      ]
+    }
+  ]
+}

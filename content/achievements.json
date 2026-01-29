@@ -1,0 +1,76 @@
+{
+  "achievements": [
+    {
+      "id": "1",
+      "title": "Sustainability Masterclass",
+      "type": "certificate",
+      "date": "2025-04-01",
+      "organization": "Accenture Middle East",
+      "description": "Completed the Sustainability Masterclass program.",
+      "link": ""
+    },
+    {
+      "id": "2",
+      "title": "Manage a Project with Digital Tools",
+      "type": "certificate",
+      "date": "2024-10-01",
+      "organization": "Grow with Google",
+      "description": "Completed project management course with digital tools certification.",
+      "link": ""
+    },
+    {
+      "id": "3",
+      "title": "IBM EYOUTH Program",
+      "type": "certificate",
+      "date": "2025-12-01",
+      "organization": "IBM",
+      "description": "Participated in the IBM EYOUTH Program (Dec 2025 – Jan 2026).",
+      "link": ""
+    },
+    {
+      "id": "4",
+      "title": "AWS Cloud Practitioner (In Progress)",
+      "type": "certificate",
+      "date": "2026-01-01",
+      "organization": "Amazon Web Services",
+      "description": "Currently pursuing AWS Cloud Practitioner certification.",
+      "link": ""
+    },
+    {
+      "id": "5",
+      "title": "Pixel Studio – Founder",
+      "type": "leadership",
+      "date": "2025-01-01",
+      "organization": "Pixel Studio",
+      "description": "Founded a game studio and led the full development of 'Fakhr Al-Suwaidi,' managing the project end-to-end from securing the deal to execution and delivery. Oversaw creative direction, technical development, and business coordination to ensure successful launch.",
+      "link": ""
+    },
+    {
+      "id": "6",
+      "title": "Tuwaiq Academy Student Club – Founder & President",
+      "type": "leadership",
+      "date": "2025-06-01",
+      "organization": "King Saud University",
+      "description": "Leading the Tuwaiq Academy Student Club at KSU, an umbrella student community under Tuwaiq Academy, overseeing sub-clubs including the AWS Student Club.",
+      "link": ""
+    },
+    {
+      "id": "7",
+      "title": "Future Technology Club – Core Contributor",
+      "type": "leadership",
+      "date": "2023-08-01",
+      "organization": "King Saud University",
+      "description": "Part of KSU's largest student tech club (highly selective membership). Held multiple roles across Innovation, PR, Media/Social, and Content. Delivered 5+ projects and contributed to 10+ initiatives, supporting the club's growth and reach.",
+      "link": ""
+    },
+    {
+      "id": "8",
+      "title": "KAUST Academy AI Specialization – Stage 2",
+      "type": "certificate",
+      "date": "2025-08-01",
+      "organization": "KAUST Academy",
+      "description": "Finished the Second stage of the Artificial Intelligence Specialization program.",
+      "link": ""
+    }
+  ]
+}

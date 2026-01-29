@@ -1,0 +1,57 @@
+{
+  "name": "Muath Al-Duraym",
+  "tagline": "Senior CS Student | Founder of Pixel Studio | AI & Cloud Enthusiast",
+  "shortBio": "Senior Computer Science student at King Saud University, Founder/President of the Tuwaiq Academy Student Club. Founder of Pixel Studio, and a cool guy :)",
+  "longBio": "I'm a Senior Computer Science student at King Saud University, and I'm the type of person who loves turning ideas into something real.\n\nThat's exactly why I founded Pixel Studio, a game development studio where I've delivered projects from concept to release, building playable experiences that people can actually interact with.\n\nI also founded and lead the Tuwaiq Academy Student Club at KSU, where I enjoy bringing people together, leading teams, and pushing initiatives that focus on hands-on projects and real outcomes, not just talk.\n\nOn the technical side, I'm genuinely passionate about AI. I'm currently in Stage 3 of KAUST Academy's AI Specialization, applying what I learn through practical work and real implementations. And while I'm not claiming to be a cloud expert yet, I'm deeply interested in the cloud and I'm learning it seriously, because I want to build systems that scale and run reliably in the real world.\n\nFeaturing a mix of engineering and leadership, I care about clean architecture, clear communication, and one thing above all: delivery.",
+  "education": {
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "King Saud University",
+    "location": "Riyadh, Saudi Arabia",
+    "gpa": "4.81",
+    "dates": "Jun 2022 – Present",
+    "expectedGraduation": "2026",
+    "additionalEducation": [
+      {
+        "title": "Artificial Intelligence Specialization",
+        "institution": "KAUST Academy",
+        "location": "Riyadh, Saudi Arabia",
+        "dates": "Aug 2025 – Present",
+        "description": "Finished the Second stage of the program"
+      }
+    ]
+  },
+  "interests": [
+    "Artificial Intelligence",
+    "Cloud Computing",
+    "Game Development",
+    "Web Development",
+    "Leadership"
+  ],
+  "values": [
+    {
+      "title": "Innovation",
+      "description": "Using technology to solve complex problems and deliver practical solutions."
+    },
+    {
+      "title": "Leadership",
+      "description": "Leading initiatives and teams to achieve impactful results."
+    },
+    {
+      "title": "Continuous Learning",
+      "description": "Always expanding knowledge in AI, cloud, and emerging technologies."
+    }
+  ],
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/muath-al-duraym/",
+    "email": "muathduraym@gmail.com",
+    "twitter": "https://x.com/just_moad_",
+    "website": "",
+    "phone": "+966 55 959 0485"
+  },
+  "location": "Riyadh, Saudi Arabia",
+  "avatar": "/IMG_4958 (2).JPG",
+  "languages": [
+    { "name": "Arabic", "level": "Native" },
+    { "name": "English", "level": "Fluent" }
+  ]
+}

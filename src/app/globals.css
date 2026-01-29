@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode */
+    --bg-primary: 255 255 255;
+    --bg-surface: 248 250 252;
+    --bg-surface-2: 241 245 249;
+    --text-primary: 15 23 42;
+    --text-secondary: 71 85 105;
+    --border-color: 226 232 240;
+    
+    /* Teal accent system */
+    --accent-main: 15 118 110;
+    --accent-hover: 17 94 89;
+    --accent-soft: 15 118 110;
+    --accent-highlight: 45 212 191;
+  }
+
+  .dark {
+    /* Dark mode - premium dark theme */
+    --bg-primary: 11 15 20;
+    --bg-surface: 15 22 32;
+    --bg-surface-2: 18 28 40;
+    --text-primary: 235 235 235;
+    --text-secondary: 178 178 178;
+    --border-color: 255 255 255;
+    
+    /* Teal accent system (same in dark) */
+    --accent-main: 15 118 110;
+    --accent-hover: 17 94 89;
+    --accent-soft: 15 118 110;
+    --accent-highlight: 45 212 191;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 64px;
+    --nav-h: 64px;
+  }
+
+  body {
+    @apply bg-bg-primary text-text-primary;
+    @apply transition-colors duration-300;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium;
+    @apply bg-accent text-white hover:bg-accent-hover;
+    @apply transition-all duration-200 ease-in-out;
+    @apply focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium;
+    @apply bg-transparent border border-border text-text-primary;
+    @apply hover:bg-surface transition-all duration-200 ease-in-out;
+    @apply focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .card {
+    @apply bg-surface rounded-2xl;
+    @apply border border-border;
+    @apply transition-all duration-200;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .card-hover {
+    @apply hover:border-accent/30;
+    @apply hover:-translate-y-1;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .section-label {
+    @apply text-accent text-sm font-medium tracking-wider uppercase mb-4;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl lg:text-6xl font-semibold text-text-primary mb-6;
+    line-height: 1.1;
+  }
+
+  .section-subheading {
+    @apply text-lg text-text-secondary mb-8;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+    @apply bg-accent/10 text-accent-highlight;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .nav-link {
+    @apply text-text-secondary hover:text-accent-highlight;
+    @apply transition-colors duration-200 font-medium;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .nav-link-active {
+    @apply text-accent-highlight;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .section-padding-sm {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Hero animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(6deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(6deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-3deg);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up-delay-1 {
+  animation: fadeInUp 0.8s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-2 {
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-3 {
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-4 {
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.animate-scale-in {
+  animation: scaleIn 1s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 5s ease-in-out infinite;
+}
