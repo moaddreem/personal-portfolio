@@ -4,7 +4,7 @@ date: "2025-04-01"
 tags: ["Mentorship", "Community", "Game Development", "Leadership", "Hackathon"]
 repo: ""
 demo: ""
-featured: true
+featured: false
 image: "/ftcjam.png"
 summary: "The first game-development hackathon in Saudi Arabia dedicated to high school students, where my mentored team won 1st place."
 stack: ["Unity", "Game Design", "Mentorship"]

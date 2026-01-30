@@ -5,6 +5,7 @@ tags: ["Project Management", "Web Design", "Delivery", "Game Development", "Pixe
 repo: ""
 demo: "https://www.fakhralsuwaidi.com/"
 featured: true
+featuredOrder: 2
 image: "/fakhr.jpg"
 summary: "A film-inspired game project delivered end-to-end, including full project management and website design."
 stack: ["Unity", "C#", "Web Design"]

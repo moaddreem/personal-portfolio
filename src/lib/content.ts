@@ -54,6 +54,7 @@ export interface Project {
   repo: string;
   demo: string;
   featured: boolean;
+  featuredOrder?: number;
   summary: string;
   stack: string[];
   image?: string;
@@ -119,6 +120,7 @@ export async function getProjectBySlug(slug: string): Promise<Project> {
     repo: data.repo || '',
     demo: data.demo || '',
     featured: data.featured || false,
+    featuredOrder: data.featuredOrder,
     summary: data.summary || '',
     stack: data.stack || [],
     image: data.image || '',
@@ -134,7 +136,17 @@ export async function getAllProjects(): Promise<Project[]> {
 
 export async function getFeaturedProjects(): Promise<Project[]> {
   const projects = await getAllProjects();
-  return projects.filter(p => p.featured).slice(0, 3);
+  const featured = projects.filter(p => p.featured);
+  // Sort by featuredOrder if available, otherwise by date
+  featured.sort((a, b) => {
+    if (a.featuredOrder !== undefined && b.featuredOrder !== undefined) {
+      return a.featuredOrder - b.featuredOrder;
+    }
+    if (a.featuredOrder !== undefined) return -1;
+    if (b.featuredOrder !== undefined) return 1;
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
+  return featured.slice(0, 3);
 }
 
 // Posts

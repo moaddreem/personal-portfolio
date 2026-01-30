@@ -5,6 +5,7 @@ tags: ["EdTech", "Dashboards", "Automation", "Graduation Project", "AI Assistant
 repo: ""
 demo: ""
 featured: true
+featuredOrder: 1
 image: "/itqan.png"
 summary: "A unified academic platform that streamlines accreditation reporting, curriculum alignment, and student guidance."
 stack: ["Python", "FastAPI", "React", "PostgreSQL"]
