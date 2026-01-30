@@ -19,51 +19,29 @@ export default async function HomePage() {
 
   return (
     <div className="bg-bg-primary">
-      {/* Hero Section - zoom resilient with padding instead of vh */}
-      <section id="home" className="relative overflow-hidden bg-accent">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-16 md:py-24 lg:py-32">
-            {/* Left Content */}
-            <div className="relative z-10">
-              <p className="animate-fade-in-up text-white/80 text-xs sm:text-sm font-medium tracking-wider uppercase mb-4 leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
-                {profile.tagline}
-              </p>
-              <h1 
-                className="animate-fade-in-up-delay-1 font-semibold text-white mb-6 leading-tight"
-                style={{ fontSize: 'clamp(2.5rem, 5vw + 1rem, 4.5rem)' }}
-              >
-                I&apos;m {profile.name.split(' ')[0]}<br />
-                <span className="text-white/90">{profile.name.split(' ').slice(1).join(' ')}</span>
-              </h1>
-              <p className="animate-fade-in-up-delay-2 text-base md:text-lg text-white/80 mb-8 max-w-lg leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
-                {profile.shortBio}
-              </p>
-              <div className="animate-fade-in-up-delay-3 flex flex-wrap gap-4">
-                <Link href="/#about" className="inline-flex items-center justify-center px-6 py-3 font-medium bg-white text-accent hover:bg-white/90 hover:scale-105 transition-all duration-200" style={{ borderRadius: '0 9999px 9999px 9999px', fontFamily: 'Inter, sans-serif' }}>
-                  About Me
-                </Link>
-                <Link href="/#projects" className="inline-flex items-center gap-3 text-white hover:scale-105 transition-all duration-200" style={{ fontFamily: 'Inter, sans-serif' }}>
-                  <span className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
-                    <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                    </svg>
-                  </span>
-                  <span className="font-medium uppercase tracking-wider text-sm">See Projects</span>
-                </Link>
-              </div>
-            </div>
-            
-            {/* Right - Avatar with responsive sizing */}
-            <div className="relative flex justify-center items-center order-first lg:order-last mb-8 lg:mb-0">
-              <div className="animate-scale-in relative w-48 h-48 sm:w-64 sm:h-64 lg:w-full lg:max-w-sm lg:aspect-square">
-                <div className="animate-float absolute inset-0 bg-white/10 rounded-3xl"></div>
-                <div className="animate-float-reverse absolute inset-0 bg-white/20 rounded-3xl"></div>
-                <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white/30 hover:scale-105 transition-transform duration-500">
+      {/* Hero Section */}
+      <section id="home" className="relative overflow-hidden bg-accent min-h-[100svh] md:min-h-screen flex flex-col">
+        {/* Decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-white/5 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-white/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        {/* Mobile Layout (< md) - Premium Centered Design */}
+        <div className="md:hidden flex-1 flex flex-col relative z-10">
+          {/* Hero Image at Top - Square with Glow */}
+          <div className="animate-scale-in pt-24 pb-8 flex justify-center">
+            <div className="relative">
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-white/20 rounded-2xl blur-3xl scale-150"></div>
+              <div className="relative w-40 h-40">
+                <div className="animate-float absolute -inset-3 bg-gradient-to-br from-white/20 to-transparent rounded-2xl"></div>
+                <div className="relative w-full h-full rounded-2xl overflow-hidden border-4 border-white/40 shadow-2xl">
                   <Image
                     src={profile.avatar || '/avatar.jpg'}
                     alt={profile.name}
                     fill
-                    sizes="(max-width: 768px) 90vw, 384px"
+                    sizes="160px"
                     className="object-cover"
                     priority
                   />
@@ -71,6 +49,117 @@ export default async function HomePage() {
               </div>
             </div>
           </div>
+          
+          {/* Content - Centered */}
+          <div className="flex-1 flex flex-col px-6 text-center">
+            {/* Tagline with decorative lines */}
+            <div className="animate-fade-in-up flex items-center justify-center gap-3 mb-5">
+              <span className="w-8 h-px bg-white/40"></span>
+              <p className="text-white/70 text-xs font-medium tracking-[0.2em] uppercase" style={{ fontFamily: 'Inter, sans-serif' }}>
+                {profile.tagline}
+              </p>
+              <span className="w-8 h-px bg-white/40"></span>
+            </div>
+            
+            {/* Name */}
+            <h1 className="animate-fade-in-up-delay-1 font-bold text-white mb-4 leading-[1.1]">
+              <span className="text-[2.5rem]">I&apos;m {profile.name.split(' ')[0]}</span>
+              <br />
+              <span className="text-[2rem] text-white/90">{profile.name.split(' ').slice(1).join(' ')}</span>
+            </h1>
+            
+            {/* Description */}
+            <p className="animate-fade-in-up-delay-2 text-[15px] text-white/75 mb-10 leading-relaxed max-w-xs mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
+              {profile.shortBio}
+            </p>
+            
+            {/* CTA Buttons - Stacked Full Width */}
+            <div className="animate-fade-in-up-delay-3 flex flex-col gap-3 max-w-xs mx-auto w-full">
+              <Link href="/#about" className="inline-flex items-center justify-center h-14 text-base font-semibold bg-white text-accent hover:bg-white/95 transition-all duration-300 rounded-full shadow-xl shadow-black/15" style={{ fontFamily: 'Inter, sans-serif' }}>
+                About Me
+              </Link>
+              <Link href="/#projects" className="inline-flex items-center justify-center gap-2 h-14 text-base font-medium text-white border-2 border-white/30 hover:border-white/50 hover:bg-white/10 transition-all duration-300 rounded-full" style={{ fontFamily: 'Inter, sans-serif' }}>
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+                See My Projects
+              </Link>
+            </div>
+          </div>
+          
+          {/* Bottom indicator */}
+          <div className="pb-8 flex justify-center">
+            <div className="flex gap-1.5">
+              <span className="w-8 h-1 bg-white/50 rounded-full"></span>
+              <span className="w-2 h-1 bg-white/30 rounded-full"></span>
+              <span className="w-2 h-1 bg-white/30 rounded-full"></span>
+            </div>
+          </div>
+        </div>
+        
+        {/* Desktop/Tablet Layout (>= md) - Original side-by-side */}
+        <div className="hidden md:flex container-custom flex-1 flex-col justify-center relative z-10">
+          <div className="py-24 lg:py-32">
+            {/* Tagline */}
+            <p className="animate-fade-in-up text-white/80 text-sm font-medium tracking-wider uppercase mb-6 leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
+              {profile.tagline}
+            </p>
+            
+            {/* Main content grid - text left, image right */}
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Left Content */}
+              <div className="relative z-10">
+                <h1 
+                  className="animate-fade-in-up-delay-1 font-semibold text-white mb-6 leading-tight"
+                  style={{ fontSize: 'clamp(2.5rem, 5vw + 1rem, 4.5rem)' }}
+                >
+                  I&apos;m {profile.name.split(' ')[0]}<br />
+                  <span className="text-white/90">{profile.name.split(' ').slice(1).join(' ')}</span>
+                </h1>
+                <p className="animate-fade-in-up-delay-2 text-lg text-white/80 mb-8 max-w-lg leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  {profile.shortBio}
+                </p>
+                <div className="animate-fade-in-up-delay-3 flex flex-wrap gap-4">
+                  <Link href="/#about" className="inline-flex items-center justify-center px-6 py-3 text-base font-medium bg-white text-accent hover:bg-white/90 hover:scale-105 transition-all duration-200 shadow-lg shadow-black/10" style={{ borderRadius: '0 9999px 9999px 9999px', fontFamily: 'Inter, sans-serif' }}>
+                    About Me
+                  </Link>
+                  <Link href="/#projects" className="inline-flex items-center gap-3 text-white hover:scale-105 transition-all duration-200" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    <span className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-lg shadow-black/10">
+                      <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      </svg>
+                    </span>
+                    <span className="font-medium uppercase tracking-wider text-sm">See Projects</span>
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Right - Square Avatar */}
+              <div className="relative flex justify-center items-center">
+                <div className="animate-scale-in relative w-64 md:w-64 lg:w-80 xl:w-96 h-64 md:h-64 lg:h-80 xl:h-96">
+                  <div className="animate-float absolute inset-0 bg-white/10 rounded-3xl"></div>
+                  <div className="animate-float-reverse absolute inset-0 bg-white/20 rounded-3xl"></div>
+                  <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white/30 hover:scale-105 transition-transform duration-500 shadow-2xl shadow-black/20">
+                    <Image
+                      src={profile.avatar || '/avatar.jpg'}
+                      alt={profile.name}
+                      fill
+                      sizes="(max-width: 1024px) 256px, 384px"
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Scroll indicator - desktop only */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
+          <svg className="w-6 h-6 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </section>
 
