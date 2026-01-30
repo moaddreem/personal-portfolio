@@ -25,7 +25,7 @@ export default async function HomePage() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-16 md:py-24 lg:py-32">
             {/* Left Content */}
             <div className="relative z-10">
-              <p className="animate-fade-in-up text-white/80 text-sm font-medium tracking-wider uppercase mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>
+              <p className="animate-fade-in-up text-white/80 text-xs sm:text-sm font-medium tracking-wider uppercase mb-4 leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
                 {profile.tagline}
               </p>
               <h1 
@@ -54,8 +54,8 @@ export default async function HomePage() {
             </div>
             
             {/* Right - Avatar with responsive sizing */}
-            <div className="relative hidden lg:flex justify-center items-center">
-              <div className="animate-scale-in relative w-full max-w-sm aspect-square">
+            <div className="relative flex justify-center items-center order-first lg:order-last mb-8 lg:mb-0">
+              <div className="animate-scale-in relative w-48 h-48 sm:w-64 sm:h-64 lg:w-full lg:max-w-sm lg:aspect-square">
                 <div className="animate-float absolute inset-0 bg-white/10 rounded-3xl"></div>
                 <div className="animate-float-reverse absolute inset-0 bg-white/20 rounded-3xl"></div>
                 <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white/30 hover:scale-105 transition-transform duration-500">
@@ -63,7 +63,7 @@ export default async function HomePage() {
                     src={profile.avatar || '/avatar.jpg'}
                     alt={profile.name}
                     fill
-                    sizes="(max-width: 768px) 100vw, 384px"
+                    sizes="(max-width: 768px) 90vw, 384px"
                     className="object-cover"
                     priority
                   />
