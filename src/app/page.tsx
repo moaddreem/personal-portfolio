@@ -63,6 +63,7 @@ export default async function HomePage() {
                     src={profile.avatar || '/avatar.jpg'}
                     alt={profile.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, 384px"
                     className="object-cover"
                     priority
                   />
@@ -114,6 +115,7 @@ export default async function HomePage() {
                   src="/2FEAB54D-31D8-4DF0-A6FC-EBAF375F0C2C.png"
                   alt="Muath working / portrait"
                   fill
+                  sizes="(max-width: 768px) 100vw, 384px"
                   className="object-cover rounded-[32px]"
                 />
               </div>
@@ -331,6 +333,7 @@ export default async function HomePage() {
                           src={post.image}
                           alt={post.title}
                           fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px"
                           className="object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                       ) : (
