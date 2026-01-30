@@ -172,15 +172,7 @@ export default async function HomePage() {
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/momo 2026 jan.pdf" className="btn-primary">
-                  Download CV
-                </Link>
-                <Link href="/#skills" className="btn-secondary">
-                  View Skills
-                </Link>
-              </div>
-            </AnimateOnScroll>
+                          </AnimateOnScroll>
           </div>
         </div>
       </section>
