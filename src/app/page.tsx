@@ -86,15 +86,6 @@ export default async function HomePage() {
               </Link>
             </div>
           </div>
-          
-          {/* Bottom indicator */}
-          <div className="pb-8 flex justify-center">
-            <div className="flex gap-1.5">
-              <span className="w-8 h-1 bg-white/50 rounded-full"></span>
-              <span className="w-2 h-1 bg-white/30 rounded-full"></span>
-              <span className="w-2 h-1 bg-white/30 rounded-full"></span>
-            </div>
-          </div>
         </div>
         
         {/* Desktop/Tablet Layout (>= md) - Original side-by-side */}
