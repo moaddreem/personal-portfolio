@@ -121,6 +121,18 @@ export default async function HomePage() {
               </div>
             </AnimateOnScroll>
             <div>
+              {/* Mobile-only image at top left */}
+              <div className="float-left mr-4 mb-4 lg:hidden">
+                <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden">
+                  <Image
+                    src="/2FEAB54D-31D8-4DF0-A6FC-EBAF375F0C2C.png"
+                    alt="Muath working / portrait"
+                    fill
+                    sizes="(max-width: 768px) 128px, 0px"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
               <AnimateOnScroll animation="fade-up">
                 <p className="section-label">My Skillset</p>
                 <h2 className="section-heading mb-10">
