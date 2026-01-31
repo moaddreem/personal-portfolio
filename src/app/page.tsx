@@ -20,7 +20,7 @@ export default async function HomePage() {
   return (
     <div className="bg-bg-primary">
       {/* Hero Section */}
-      <section id="home" className="relative overflow-hidden bg-accent min-h-[100svh] md:h-[65vh] flex flex-col">
+      <section id="home" className="relative overflow-hidden bg-accent min-h-[100svh] md:h-[55vh] flex flex-col">
         {/* Decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-white/5 rounded-full blur-3xl"></div>
@@ -90,7 +90,7 @@ export default async function HomePage() {
         
         {/* Desktop/Tablet Layout (>= md) - Original side-by-side */}
         <div className="hidden md:flex container-custom flex-1 flex-col justify-center relative z-10">
-          <div className="py-6 lg:py-8">
+          <div className="py-0">
             {/* Tagline */}
             <p className="animate-fade-in-up text-white/80 text-sm font-medium tracking-wider uppercase mb-6 leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
               {profile.tagline}
