@@ -89,7 +89,7 @@ export default async function HomePage() {
         </div>
         
         {/* Desktop/Tablet Layout (>= md) - Original side-by-side */}
-        <div className="hidden md:flex container-custom flex-1 flex-col justify-center relative z-10">
+        <div className="hidden md:flex container-custom flex-1 flex-col justify-start pt-16 relative z-10">
           <div className="py-6 lg:py-8">
             {/* Tagline */}
             <p className="animate-fade-in-up text-white/80 text-sm font-medium tracking-wider uppercase mb-6 leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
