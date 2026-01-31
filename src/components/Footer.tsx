@@ -80,7 +80,7 @@ export default function Footer({ links }: FooterProps) {
             © {currentYear} MUATH AL-DURAYM. All rights reserved.
           </p>
           <p className="text-text-secondary/50 text-xs" style={{ fontFamily: 'Inter, sans-serif' }}>
-            v1.0.7 • Build 2026-01-31
+            v1.0.8 • Build 2026-01-31
           </p>
         </div>
       </div>
