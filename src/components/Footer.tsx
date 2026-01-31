@@ -75,9 +75,12 @@ export default function Footer({ links }: FooterProps) {
           
         </div>
         
-        <div className="pt-8 border-t border-border">
-          <p className="text-text-secondary text-sm text-center" style={{ fontFamily: 'Inter, sans-serif' }}>
+        <div className="pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-2">
+          <p className="text-text-secondary text-sm text-center sm:text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
             © {currentYear} MUATH AL-DURAYM. All rights reserved.
+          </p>
+          <p className="text-text-secondary/50 text-xs" style={{ fontFamily: 'Inter, sans-serif' }}>
+            v1.0.0 • Build 2026-01-31
           </p>
         </div>
       </div>

@@ -44,6 +44,13 @@
     overflow-x: hidden;
   }
 
+  /* Desktop zoom 125% */
+  @media (min-width: 1024px) {
+    html {
+      zoom: 1.25;
+    }
+  }
+
   body {
     @apply bg-bg-primary text-text-primary;
     @apply transition-colors duration-300;
