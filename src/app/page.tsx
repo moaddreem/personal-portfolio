@@ -20,7 +20,7 @@ export default async function HomePage() {
   return (
     <div className="bg-bg-primary">
       {/* Hero Section */}
-      <section id="home" className="relative overflow-hidden bg-accent min-h-[100svh] md:min-h-[auto] flex flex-col">
+      <section id="home" className="relative overflow-hidden bg-accent min-h-[100svh] md:h-[80vh] flex flex-col">
         {/* Decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-white/5 rounded-full blur-3xl"></div>
